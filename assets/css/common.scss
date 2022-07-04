@@ -1,3 +1,4 @@
+@import "config/variable";
 @import "config/reset";
 
 html {
@@ -33,6 +34,11 @@ body {
 
 .ly-section {
   margin: 3rem 4rem;
+
+  @include mq(tb) {
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
 
   ._title {
     font-size: 3.6rem;
@@ -71,10 +77,10 @@ body {
   }
 }
 
-.c-box{
+.c-box {
   background-color: #f1f5f9;
-  padding:24px 32px;
-  margin-top:1.5em;
+  padding: 24px 32px;
+  margin-top: 1.5em;
 }
 
 .grd-wrap {
@@ -106,10 +112,18 @@ body {
   .p-content_body {
     width: 70%;
     margin-top: .5em;
+
+    @include mq(sp) {
+      width: 100%;
+    }
   }
 
   .p-code_body {
     width: calc(100% - 70% - 2.5%);
+
+    @include mq(sp) {
+      display: none;
+    }
   }
 }
 

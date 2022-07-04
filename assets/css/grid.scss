@@ -1,3 +1,4 @@
+@import "config/variable";
 
 .grd-wrap {
   display: grid;
@@ -8,48 +9,137 @@
   }
 
   &._2-item {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 3vw;
+
+    @include mq(tb) {
+      gap: 2vw;
+    }
+
+    @include mq(sp) {
+      grid-template-columns: 1fr;
+      gap: 3vw;
+    }
   }
 
   &._3-item {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 3vw;
+
+    @include mq(tb) {
+      gap: 2vw;
+    }
+
+    @include mq(sp) {
+      grid-template-columns: 1fr;
+      gap: 3vw;
+    }
   }
 
   &._4-item {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     gap: 2vw;
+
+    @include mq(tb) {
+      gap: 1.5vw;
+    }
+
+    @include mq(sp) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2vw;
+    }
   }
 
   &._5-item {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(5, 1fr);
     gap: 2vw;
+
+    @include mq(tb) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2vw;
+    }
+
+    @include mq(sp) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2vw;
+    }
   }
 
   &._6-item {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(6, 1fr);
     gap: 1.5vw;
+
+    @include mq(tb) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2vw;
+    }
+
+    @include mq(sp) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2vw;
+    }
   }
 
   &._7-item {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(7, 1fr);
     gap: 1.5vw;
+
+    @include mq(tb) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5vw;
+    }
+
+    @include mq(sp) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2vw;
+    }
   }
 
   &._8-item {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(8, 1fr);
     gap: 1vw;
+
+    @include mq(tb) {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5vw;
+    }
+
+    @include mq(sp) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2vw;
+    }
+
+
   }
 
   &._9-item {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(9, 1fr);
     gap: 1vw;
+
+    @include mq(tb) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5vw;
+    }
+
+    @include mq(sp) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2vw;
+    }
   }
 
   &._10-item {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(10, 1fr);
     gap: 1vw;
+
+    @include mq(tb) {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5vw;
+    }
+
+    @include mq(sp) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2vw;
+    }
   }
 
   //余白リセット

@@ -1,0 +1,17 @@
+$breakpoints: (
+	"tb": "screen and (max-width:1024px)", //タブレット表示
+	"sp": "screen and (max-width:767px)", //スマートフォン表示
+) !default;
+
+@mixin mq($breakpoint) {
+	@media #{map-get($breakpoints, $breakpoint)} {
+		@content;
+	}
+}
+
+/*--設定の仕方
+XXの部分に対象のサイズを入れる
+@include mq(XX){
+	引数でサイズを指定
+}
+--*/
